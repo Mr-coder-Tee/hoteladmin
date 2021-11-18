@@ -6,6 +6,7 @@ import {
   faEyeSlash,
   faAt,
   faLock,
+  faLongArrowAltRight,
 } from "@fortawesome/free-solid-svg-icons";
 
 const LoginPage = () => {
@@ -37,7 +38,15 @@ const LoginPage = () => {
       </div>
       <div className="loginForm">
         <div className="form">
-          <h2 style={{ textAlign: "center", marginBottom: 10, marginTop: 10,fontFamily:'monospace' ,fontSize:34}}>
+          <h2
+            style={{
+              textAlign: "center",
+              marginBottom: 20,
+              marginTop: 10,
+              fontFamily: "monospace",
+              fontSize: 34,
+            }}
+          >
             Sign In
           </h2>
           <div className="inputContainer">
@@ -46,9 +55,33 @@ const LoginPage = () => {
           </div>
           <div className="inputContainer">
             <FontAwesomeIcon icon={faLock} />
-            <input placeholder="Password" className="input"  type={type}/>
-            <button  type="button" className="passwordBtn" onClick={()=>passwordVisibility()}>
+            <input placeholder="Password" className="input" type={type} />
+            <button
+              type="button"
+              className="passwordBtn"
+              onClick={() => passwordVisibility()}
+            >
               <EyeChanger />
+            </button>
+          </div>
+          <div style={{display:'flex',justifyContent:'right',marginTop:20}}>
+            <button
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                padding: 10,
+                borderRadius: 10,
+                border: "none",
+                backgroundColor: "#0BB5FF",
+                color: "white",
+              }}
+            >
+              Sign in
+              <FontAwesomeIcon
+                icon={faLongArrowAltRight}
+                style={{ marginLeft: 10 }}
+              />
             </button>
           </div>
         </div>
